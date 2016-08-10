@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="RaspberryPi.data"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RaspberryPi"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="669.425" Width="1036.782">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="171,63,122.333,10" Height="596" Width="225" Grid.Column="0">
+            <TextBox x:ConnectionId='5' x:Name="AutoBox" VerticalAlignment="Center" Margin="10" Text="AutoControl" IsReadOnly="True" BorderThickness="0" />
+            <ToggleSwitch x:ConnectionId='6' x:Name="AutoSwitch" VerticalAlignment="Center" Margin="10,10,10,10" OnContent="AutoControl ON" OffContent="AutoControl Off"                              />
+            
+            <ListBox x:ConnectionId='7' x:Name="listBox" HorizontalAlignment="Left" Height="224" VerticalAlignment="Top" Width="215"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0">
+                    <Button x:ConnectionId='9' x:Name="AddButt" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Center"                   />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+                <Button x:ConnectionId='8' x:Name="RemoveButt" Content="Remove" HorizontalAlignment="Right" VerticalAlignment="Center"                     />
+                </StackPanel>
+            </Grid>
+            
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="170.667,203,182.667,257" Height="209" Width="165" Grid.Column="1">
+            <TextBox x:ConnectionId='1' x:Name="ControlBox" TextWrapping="Wrap" Text="Control!" IsReadOnly="True" BorderThickness="0"/>
+            <Button x:ConnectionId='2' x:Name="CLEAN" Content="CLEAN" HorizontalAlignment="Center" Margin="10,10" VerticalAlignment="Top"                   />
+            <Button x:ConnectionId='3' x:Name="DOCK" Content="DOCK" HorizontalAlignment="Center" Margin="10,10" VerticalAlignment="Top"                  />
+            <TextBox x:ConnectionId='4' x:Name="StatusBox" HorizontalAlignment="Center" Margin="10,10" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" IsReadOnly="True"/>
+
+        </StackPanel>
+    </Grid>
+</Page>
+
